@@ -1,0 +1,78 @@
+{
+  "info": {
+    "title": "Node Rest Shop API",
+    "version": "1.0.0",
+    "description": "Nodejs API"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/orders": {
+      "get": {
+        "summary": "Get a list of orders",
+        "description": "Retrieve a list of orders records",
+        "responses": {
+          "200": {
+            "description": "A successful response"
+          }
+        },
+        "tags": [
+          "Orders"
+        ]
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Get a list of products",
+        "description": "Retrieve a list of products records",
+        "responses": {
+          "200": {
+            "description": "A successful response"
+          }
+        },
+        "tags": [
+          "Products"
+        ]
+      },
+      "post": {
+        "summary": "Create a new product",
+        "description": "Create a new product with a JSON request body.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the product."
+                  },
+                  "price": {
+                    "type": "number",
+                    "description": "The price of the product."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Product created successfully."
+          },
+          "400": {
+            "description": "Invalid input data."
+          }
+        },
+        "tags": [
+          "Products"
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "responses": {},
+  "parameters": {},
+  "securityDefinitions": {},
+  "tags": []
+}

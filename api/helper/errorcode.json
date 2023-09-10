@@ -1,0 +1,35 @@
+{
+    "E0": {
+      "code": 0,
+      "message": "Success"
+    },
+    "E101": {
+      "code": 101,
+      "message": "Email already exist"
+    },
+    "E102": {
+      "code": 102,
+      "message": "Email or password wrong"
+    },
+    "E400": {
+      "code": 400,
+      "message": "Invalid Request"
+    },
+    "E401": {
+      "code": 401,
+      "message": "Invalid authorization."
+    },
+    "E402": {
+      "code": 402,
+      "message": "Product not found"
+    },
+    "E404": {
+      "code": 404,
+      "message": "There is no data to show"
+    },
+    "E500": {
+      "code": 500,
+      "message": "An error has occurred. Please try again."
+    }
+  }
+  

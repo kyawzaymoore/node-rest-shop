@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: my-mongodb-test
+    ports:
+      - "27017:27017"
+  nodejs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+    ports:
+      - "3000:3000"  # Port mapping for Node.js API

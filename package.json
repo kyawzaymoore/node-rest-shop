@@ -1,0 +1,32 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API Tutorial Project (Build a simple shop API)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node generateSwagger.js && nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Kyaw Zay Moore",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.4.5",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

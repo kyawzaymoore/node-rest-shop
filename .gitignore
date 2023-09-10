@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Log files
+logs/
+*.log
+
+# User-specific files
+.npmrc
+.npmignore
+.npm-debug.log*
+
+# Compiled binary addons
+build/Release/

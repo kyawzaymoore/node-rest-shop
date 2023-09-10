@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "32bb3fe7-cb08-4255-9c7d-f909ffa9f9ac",
+		"name": "node-rest-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7510202"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "GET Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/products",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Product",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"BawDar Beer\",\n    \"price\": 1500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/products",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Product By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/products/64f47f46f82320dd89ae2e50",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								"64f47f46f82320dd89ae2e50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Product By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/products/64ee0c63f01cc726c200a619",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								"64ee0c63f01cc726c200a619"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Product By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bawdar Beer update\",\n    \"price\": 1600\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/products/64ee11645e877f9c5424588a",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								"64ee11645e877f9c5424588a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "POST Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": \"64fd59ce1a86bec9b277130e\",\n    \"quantity\" : 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/orders",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/orders",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Order By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/orders/64f47f83e2133ec0c41c9691",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"64f47f83e2133ec0c41c9691"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"kzm@gmail.com\",\n    \"password\": \"codigo180\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/signup",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (responseCode.code === 200) {",
+									"    ",
+									"    try {",
+									"        var data = JSON.parse(responseBody),",
+									"            authToken = data.data.token;",
+									"    }",
+									"    ",
+									"    catch(e){",
+									"        console.log(e);",
+									"    }",
+									"    ",
+									"    pm.environment.set(\"authToken\", authToken);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{BasicAuth:Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{BasicAuth:Password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"kzm@gmail.com\",\n    \"password\": \"codigo180\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
