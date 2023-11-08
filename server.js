@@ -12,5 +12,6 @@ const server = http.createServer(app);
 
 server.listen(port, () => {
     console.log(`Server is running in ${nodeEnv} mode on port ${port}`);
+    console.log(`env: ${nodeEnv}`);
     console.log(`Database URL: ${dbUrl}`);
   });
